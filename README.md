@@ -1,5 +1,5 @@
 # Modules
-This repository is just a collection of **all of the pmod modules** that I use daily. All of them are made by me. Only tested in bash, does not work on ZSH.
+This repository is just a collection of **all of the pmod modules** that I use daily. All of them are made by me. Only tested in bash, does not work on zsh.
 # Features
 - A **custom main prompt**
 - A **git branch indicator**
