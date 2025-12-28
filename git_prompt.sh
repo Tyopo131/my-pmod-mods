@@ -1,4 +1,4 @@
-#?
+#? 50
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
         return 0
 fi
