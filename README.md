@@ -9,7 +9,7 @@ This repository is just a collection of **all of the pmod modules** that I use d
 ## Requirements
 |Requirement|Version|
 |-----------|-------|
-|[pmod](https://github.com/Tyopo131/pmod/)|0.2.0-alpha+|
+|[pmod](https://github.com/Tyopo131/pmod/)|v0.2.0-alpha+|
 |[Git](https://git-scm.com/)|Anything that supports modern protocols|
 |This repository|\(obviously\)|
 ## Steps
