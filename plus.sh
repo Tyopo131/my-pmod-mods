@@ -12,7 +12,27 @@ __plus_help() {
 	printf "+h: compare two files using a sha256 hash\n\tusage: +h [sha512sum args...] file1 file2\n\n"
 	printf "+x: mark a file as owner- and group- executable\n\tusage: +x file [files...]\n\n"
 }
+__plus_queue=()
+__plus_queue_add() {
+	if [[ -z "$1" ]]; then
+		printf "usage: %s [command]\n" "$0"
+		return -1
+	fi
+	__plus_queue+=("$*")
+}
+__plus_queue_exec() {
+	for item in "${__plus_queue[@]}"; do
+		echo "[$item]"
+		$item
+	done
+}
+__plus_queue_remove() {
+	unset "__plus_queue[-1]"
+}
 alias +h="__plus_hashcmp"
 alias +="__plus_help"
 alias ++="+"
 alias +x="chmod u+x,g+x"
+alias +?='echo $?'
+alias +q='__plus_queue_add'
+alias +qe='__plus_queue_exec'
